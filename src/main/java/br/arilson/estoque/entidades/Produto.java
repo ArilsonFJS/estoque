@@ -2,7 +2,7 @@ package br.arilson.estoque.entidades;
 
 public class Produto {
 	
-	private int codigo;
+	private int idProduto;
 	private String nome;
 	private double preco;
 	private int quantidade;
@@ -11,20 +11,20 @@ public class Produto {
 	
 	public Produto() {}
 
-	public Produto(int codigo, String nome, double preco, int quantidade, Categorias categoria) {
-		this.codigo = codigo;
+	public Produto(int idProduto, String nome, double preco, int quantidade, Categorias categoria) {
+		this.idProduto = idProduto;
 		this.nome = nome;
 		this.preco = preco;
 		this.quantidade = quantidade;
 		this.categoria = categoria;
 	}
 
-	public int getCodigo() {
-		return codigo;
+	public int getIdProduto() {
+		return idProduto;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setIdProduto(int idProduto) {
+		this.idProduto = idProduto;
 	}
 
 	public String getNome() {

@@ -2,22 +2,20 @@ package br.arilson.estoque.entidades;
 
 public class Categorias {
 	
-	private int codigo;
+	private int idCategoria;
 	private String nome;
-	private Produto produto;
 	
-	public Categorias(int codigo, String nome, Produto produto) {
-		this.codigo = codigo;
+	public Categorias(int idCategoria, String nome) {
+		this.idCategoria = idCategoria;
 		this.nome = nome;
-		this.produto = produto;
 	}
 
-	public int getCodigo() {
-		return codigo;
+	public int getIdCategoria() {
+		return idCategoria;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setIdCategoria(int idCategoria) {
+		this.idCategoria = idCategoria;
 	}
 
 	public String getNome() {
@@ -26,14 +24,6 @@ public class Categorias {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public Produto getProduto() {
-		return produto;
-	}
-
-	public void setProduto(Produto produto) {
-		this.produto = produto;
 	}
 	
 }
