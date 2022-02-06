@@ -6,8 +6,9 @@ import java.sql.DriverManager;
 public class DB {
 
 	public static Connection connect() throws Exception {
+
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		return DriverManager.getConnection("jdbc:mysql://localhost:3306/estoque", "root", "12345");
+		return DriverManager.getConnection("jdbc:mysql://localhost:3306/estoque", "root", "1234");
 
 	}
 

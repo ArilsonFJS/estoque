@@ -4,11 +4,6 @@ public class Categorias {
 	
 	private int idCategoria;
 	private String nome;
-	
-	public Categorias(int idCategoria, String nome) {
-		this.idCategoria = idCategoria;
-		this.nome = nome;
-	}
 
 	public int getIdCategoria() {
 		return idCategoria;
