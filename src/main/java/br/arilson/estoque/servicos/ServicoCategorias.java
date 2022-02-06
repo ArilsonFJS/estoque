@@ -32,7 +32,13 @@ public class ServicoCategorias {
 	
 	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void excluir(@QueryParam("codigo") int codigo) {
+	public void excluir(@QueryParam("idCategoria") int idCategoria) {
+		
+		try {
+			DaoCategorias.excluir(idCategoria);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 	
