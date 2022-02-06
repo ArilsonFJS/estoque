@@ -1,6 +1,7 @@
 package br.arilson.estoque.dao;
 
 import java.sql.PreparedStatement;
+
 import br.arilson.estoque.entidades.Categorias;
 
 public class DaoCategorias {
@@ -25,6 +26,18 @@ public class DaoCategorias {
 			
 			ps.setInt(1, idCategorias);
 			ps.execute();
+		}
+	}
+	
+	public static void atualizar(Categorias categorias) throws Exception {
+		
+		String sql = "UPDATE CATEGORIAS SET nome = ? WHERE idCategorias = ?"; 
+		
+		try(PreparedStatement ps = DB.connect().prepareStatement(sql)){
+			
+			ps.setString(1, categorias.getNome());
+			ps.setInt(2, categorias.getIdCategorias());
+			ps.executeUpdate();
 		}
 	}
 }

@@ -2,15 +2,15 @@ package br.arilson.estoque.entidades;
 
 public class Categorias {
 	
-	private int idCategoria;
+	private int idCategorias;
 	private String nome;
 
-	public int getIdCategoria() {
-		return idCategoria;
+	public int getIdCategorias() {
+		return idCategorias;
 	}
 
-	public void setIdCategoria(int idCategoria) {
-		this.idCategoria = idCategoria;
+	public void setIdCategorias(int idCategoria) {
+		this.idCategorias = idCategoria;
 	}
 
 	public String getNome() {
