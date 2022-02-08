@@ -9,8 +9,8 @@ public class Categorias {
 		return idCategorias;
 	}
 
-	public void setIdCategorias(int idCategoria) {
-		this.idCategorias = idCategoria;
+	public void setIdCategorias(int idCategorias) {
+		this.idCategorias = idCategorias;
 	}
 
 	public String getNome() {

@@ -49,21 +49,24 @@ public class DaoCategorias {
 		try (PreparedStatement ps = DB.connect().prepareStatement(sql)) {
 
 			ps.setInt(1, idCategorias);
+			
 			ResultSet rs = ps.executeQuery();
-
-			if (rs.next()) {
+			
+			if(rs.next()) {
+				
 				Categorias categorias = new Categorias();
-				
-				categorias.setNome(rs.getString("nome"));
 				categorias.setIdCategorias(rs.getInt("idCategorias"));
-				
+				categorias.setNome(rs.getString("nome"));
 
+				System.out.println(categorias.getIdCategorias());
+				System.out.println(categorias.getNome());
+				
 				return categorias;
 			}else {
 				return null;
 			}
 
-		} 
-		
+		}
+
 	}
 }
