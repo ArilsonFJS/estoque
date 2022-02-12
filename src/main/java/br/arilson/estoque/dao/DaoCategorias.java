@@ -2,6 +2,8 @@ package br.arilson.estoque.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.arilson.estoque.entidades.Categorias;
 
@@ -58,9 +60,6 @@ public class DaoCategorias {
 				categorias.setIdCategorias(rs.getInt("idCategorias"));
 				categorias.setNome(rs.getString("nome"));
 
-				System.out.println(categorias.getIdCategorias());
-				System.out.println(categorias.getNome());
-				
 				return categorias;
 			}else {
 				return null;
@@ -68,5 +67,28 @@ public class DaoCategorias {
 
 		}
 
+	}
+	
+	public static List<Categorias> listar() throws Exception{
+		
+		String sql = "SELECT * FROM CATEGORIAS";
+		
+		List<Categorias> lista = new ArrayList<>();
+		
+		try (PreparedStatement ps = DB.connect().prepareStatement(sql)) {
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Categorias categorias = new Categorias();
+				
+				categorias.setIdCategorias(rs.getInt("idCategorias"));
+				categorias.setNome(rs.getString("nome"));
+				
+				lista.add(categorias);
+			}
+		}
+		
+		return lista;
 	}
 }

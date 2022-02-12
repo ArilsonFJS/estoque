@@ -69,7 +69,12 @@ public class ServicoCategorias {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Categorias> listar(){
-		return null;
+	@Path("listar")
+	public List<Categorias> listar() throws Exception{
+		try {
+			return DaoCategorias.listar();
+		}catch (Exception e) {
+			throw e;
+		}
 	}
 }
