@@ -2,6 +2,7 @@ package br.arilson.estoque.servicos;
 
 import java.util.List;
 
+import br.arilson.estoque.dao.DaoProduto;
 import br.arilson.estoque.entidades.Produto;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -21,6 +22,11 @@ public class ServicoProduto {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void inserir(Produto produto) {
 		
+		try {
+			DaoProduto.inserir(produto);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@DELETE

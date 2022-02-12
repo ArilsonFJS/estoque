@@ -6,7 +6,7 @@ public class Produto {
 	private String nome;
 	private double preco;
 	private int quantidade;
-	private Categorias categoria;
+	private Categorias categorias;
 	
 
 	public int getIdProduto() {
@@ -41,12 +41,12 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 
-	public Categorias getCategoria() {
-		return categoria;
+	public Categorias getCategorias() {
+		return categorias;
 	}
 
-	public void setCategoria(Categorias categoria) {
-		this.categoria = categoria;
+	public void setCategorias(Categorias categorias) {
+		this.categorias = categorias;
 	}
 	
 }
