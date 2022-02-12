@@ -57,14 +57,13 @@ public class ServicoCategorias {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Categorias pesquisar(@QueryParam("id") int id) {
+	public Categorias pesquisar(@QueryParam("id") int id) throws Exception {
 		
-			try {
-				DaoCategorias.pesquisar(id);
-			}catch (Exception e) {
-				e.printStackTrace();
-			}
-		return null;
+		try {
+	        return DaoCategorias.pesquisar(id);
+	    }catch (Exception e) {
+	        throw e;
+	    }
 		
 	}
 	
